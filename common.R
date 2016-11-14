@@ -1,0 +1,3 @@
+household_power_consumption <- read.csv("household_power_consumption.txt", sep=";", stringsAsFactors = FALSE)
+household_power_consumption$Date <- as.Date(household_power_consumption$Date,"%d/%m/%Y")
+limited_household_power_consumption <- household_power_consumption[household_power_consumption$Date >= as.Date("2007-2-1","%Y-%m-%d") & household_power_consumption$Date <= as.Date("2007-2-2","%Y-%m-%d"),]
