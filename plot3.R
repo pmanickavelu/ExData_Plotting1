@@ -3,7 +3,7 @@ source("common2.R")
 limited_household_power_consumption$Sub_metering_1 <- as.numeric(limited_household_power_consumption$Sub_metering_1)
 limited_household_power_consumption$Sub_metering_2 <- as.numeric(limited_household_power_consumption$Sub_metering_2)
 limited_household_power_consumption$Sub_metering_3 <- as.numeric(limited_household_power_consumption$Sub_metering_3)
-dev.copy(png, "plot3.png")
+png("plot3.png",width=480, height=480)
 plot(limited_household_power_consumption$DateTime, limited_household_power_consumption$Sub_metering_1, type="n", xlab = "", ylab = "Energy sub metering")
 
 lines(limited_household_power_consumption$DateTime, limited_household_power_consumption$Sub_metering_1, type="l")
