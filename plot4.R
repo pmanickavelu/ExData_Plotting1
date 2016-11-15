@@ -16,12 +16,12 @@ plot(limited_household_power_consumption$DateTime, limited_household_power_consu
 
 plot(limited_household_power_consumption$DateTime, limited_household_power_consumption$Voltage, type="l", ylab="Voltage", xlab = "datetime")
 
-plot(limited_household_power_consumption$DateTime, limited_household_power_consumption$Sub_metering_1, type="n")
+plot(limited_household_power_consumption$DateTime, limited_household_power_consumption$Sub_metering_1, type="n", xlab = "", ylab = "Energy sub metering")
 
 lines(limited_household_power_consumption$DateTime, limited_household_power_consumption$Sub_metering_1, type="l")
 lines(limited_household_power_consumption$DateTime, limited_household_power_consumption$Sub_metering_2, type="l", col="red")
 lines(limited_household_power_consumption$DateTime, limited_household_power_consumption$Sub_metering_3, type="l", col="blue")
-
+legend("topright",c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lty=c(1,1,1), col=c("black","red","blue"))
 
 plot(limited_household_power_consumption$DateTime, limited_household_power_consumption$Global_reactive_power, type="l", ylab="Global_reactive_power", xlab = "datetime")
 
